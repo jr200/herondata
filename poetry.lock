@@ -1269,6 +1269,17 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "torch"
+version = "1.11.0"
+description = "Tensors and Dynamic neural networks in Python with strong GPU acceleration"
+category = "main"
+optional = false
+python-versions = ">=3.7.0"
+
+[package.dependencies]
+typing-extensions = "*"
+
+[[package]]
 name = "tornado"
 version = "6.2"
 description = "Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed."
@@ -1321,6 +1332,7 @@ pyyaml = ">=5.1"
 regex = "!=2019.12.17"
 requests = "*"
 tokenizers = ">=0.11.1,<0.11.3 || >0.11.3,<0.13"
+torch = {version = ">=1.0,<1.12", optional = true, markers = "extra == \"torch\""}
 tqdm = ">=4.27"
 
 [package.extras]
@@ -1430,7 +1442,7 @@ docs = ["jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "jaraco.packaging (>=9)
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.7"
-content-hash = "afa9e27e9cf391d4d2f26a9a36f05833de82095a936e3efac2e122a9ee0eaea8"
+content-hash = "53a86d37d1bcb02cc4dd16e98f5ec39952f44f5190ef24532dc5b9ff6e1cc80d"
 
 [metadata.files]
 anyio = []
@@ -1529,6 +1541,7 @@ threadpoolctl = []
 tinycss2 = []
 tokenizers = []
 tomli = []
+torch = []
 tornado = []
 tqdm = []
 traitlets = []
